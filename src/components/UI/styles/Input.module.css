@@ -1,0 +1,31 @@
+:root {
+    --icon-padding: 48px;
+    --icon-size: 32px;
+}
+
+.input-text-container {
+    position: relative;
+    border: 2px solid #0053A4;
+    border-radius: 6px;
+    padding-left: var(--icon-padding);
+}
+
+.input-text {
+    font-family: Roboto-Regular;
+    font-size: 32px;
+    border: none;
+    outline: none;
+}
+
+.input-text-icon {
+    position: absolute;
+    top: 50%;
+    left: calc((var(--icon-padding) - var(--icon-size)) / 2);
+    width: var(--icon-size);
+    height: var(--icon-size);
+    transform: translateY(-50%);
+}
+
+.input-text-label {
+    display: block;
+}

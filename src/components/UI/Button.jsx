@@ -40,4 +40,4 @@ function Button({ children, clickAction }) {
     )
 }
 
-export default Button
+export default Button;

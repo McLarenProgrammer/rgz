@@ -1,6 +1,7 @@
 import classes from './styles/Protocols.module.css'
 import Button from './UI/Button'
 import Checkbox from './UI/Checkbox';
+import Input from './UI/Input';
 
 function Protocols() {
     function someAction(argument) {
@@ -10,7 +11,8 @@ function Protocols() {
     return (
     <>
       <Button clickAction={() => someAction('Да неужели?)')}>Тестовая кнопка</Button>
-      <Checkbox inputName='testCheck'>Тестовый чекбокс</Checkbox>
+      <Checkbox inputID='testCheck'>Тестовый чекбокс</Checkbox>
+      <Input inputID='testText'>Тестовый инпут</Input>
     </>
   )
 }
