@@ -12,7 +12,7 @@ function Protocols() {
     <>
       <Button clickAction={() => someAction('Да неужели?)')}>Тестовая кнопка</Button>
       <Checkbox inputID='testCheck'>Тестовый чекбокс</Checkbox>
-      <Input inputID='testText'>Тестовый инпут</Input>
+      <Input inputID='testText' placeholder='Почта' hasIcon>Тестовый инпут</Input>
     </>
   )
 }

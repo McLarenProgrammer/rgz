@@ -1,8 +1,6 @@
 import classes from './styles/Checkbox.module.css'
 
 function Checkbox({ children, inputID = "default" }) {
-    console.log(classes);
-
     return (
       <div className={classes.checkbox}>
         <input type="checkbox" id={inputID} />
