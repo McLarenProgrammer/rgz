@@ -21,8 +21,8 @@
     border-radius: 6px;
     padding-left: 12px;
     padding-right: 12px;
-    padding-top: 13px;
-    padding-bottom: 13px;
+    padding-top: 17px;
+    padding-bottom: 17px;
     width: 100%;
     z-index: 1;
 }
@@ -37,10 +37,12 @@
     color: rgb(110, 110, 110);
     top: 50%;
     z-index: 1;
+    transition: top .15s, font-size .15s;
 }
 
-.input-text-container:has(.input-text:focus) .input-text-placeholder {
-    color: red;
+.input-text-placeholder-up {
+    font-size: 12px;
+    top: 20%;
 }
 
 .input-text:focus {
