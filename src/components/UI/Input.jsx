@@ -1,12 +1,12 @@
 import { useRef } from 'react';
 import classes from './styles/Input.module.css';
 
-function Input({ children, inputID = "default", iconSrc = "icons/person.svg", hasIcon = false }) {
+function Input({ children, inputID = "default", iconSrc = "icons/person.svg", hasIcon = false, inputType = "text" }) {
     const input = useRef(null);
     const placeholder = useRef(null);
 
-    function animatedPlaceholder() {
-        if (document.activeElement === input.current) {
+    function animatedPlaceholder(event) {
+        if (document.activeElement === input.current || event.target.value !== '') {
             placeholder.current.classList.add(classes['input-text-placeholder-up']);
             return;
         }
@@ -25,7 +25,7 @@ function Input({ children, inputID = "default", iconSrc = "icons/person.svg", ha
                             hasIcon ? classes['with-icon'] : '',
                         ].join(' ')
                     }
-                    type="text"
+                    type={inputType}
                     id={inputID}
                     onFocus={animatedPlaceholder}
                     onBlur={animatedPlaceholder}
