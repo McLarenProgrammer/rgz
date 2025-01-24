@@ -1,4 +1,6 @@
 .window {
+  display: flex;
+  flex-direction: column;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -11,12 +13,16 @@
 
 .header {
   display: flex;
+  flex-basis: 82px;
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  height: 65px;
   background-color: var(--main-color);
   color: white;
   font-family: Roboto-Bold;
   align-items: center;
   justify-content: center;
+}
+
+.main {
+  flex-basis: 100%;
 }

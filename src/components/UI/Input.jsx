@@ -12,6 +12,7 @@ function Input({
   const placeholder = useRef(null);
 
   function animatedPlaceholder(event) {
+    console.log(event);
     if (document.activeElement === input.current || event.target.value !== "") {
       placeholder.current.classList.add(classes["input-text-placeholder-up"]);
       return;
@@ -23,10 +24,9 @@ function Input({
     <>
       <div
         className={classes["input-text-container"]}
-        onClick={() => input.current.focus()}
       >
         {hasIcon ? (
-          <img className={classes["input-text-icon"]} src={iconSrc} />
+          <img className={classes["input-text-icon"]} src={iconSrc} onClick={() => input.current.focus()} />
         ) : (
           ""
         )}
@@ -47,6 +47,7 @@ function Input({
             classes["input-text-placeholder"],
             hasIcon ? classes["placeholder-with-icon"] : "",
           ].join(" ")}
+          onClick={(event) => input.current.focus()}
         >
           {children}
         </div>

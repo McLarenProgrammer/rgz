@@ -11,7 +11,7 @@ function Authorization() {
       <div className={classes.main}>
         <Form>
           <Input inputID='login' inputType='text' hasIcon>Логин</Input>
-          <Input inputID='passowrd' inputType='password' iconSrc='icons' hasIcon>Пароль</Input>
+          <Input inputID='passowrd' inputType='password' iconSrc='icons/password.svg' hasIcon>Пароль</Input>
         </Form>
       </div>
     </div>

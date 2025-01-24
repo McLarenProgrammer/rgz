@@ -1,7 +1,10 @@
 .form {
   display: flex;
+  box-sizing: border-box;
   font-family: Roboto-Regular;
   flex-direction: column;
   align-items: center;
-  margin: 20px 60px;
+  justify-content: space-between;
+  padding: 20px 60px;
+  height: 100%;
 }
