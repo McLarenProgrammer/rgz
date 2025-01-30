@@ -12,7 +12,6 @@ function Input({
   const placeholder = useRef(null);
 
   function animatedPlaceholder(event) {
-    console.log(event);
     if (document.activeElement === input.current || event.target.value !== "") {
       placeholder.current.classList.add(classes["input-text-placeholder-up"]);
       return;
@@ -30,6 +29,16 @@ function Input({
         ) : (
           ""
         )}
+        <div
+          ref={placeholder}
+          className={[
+            classes["input-text-placeholder"],
+            hasIcon ? classes["placeholder-with-icon"] : "",
+          ].join(" ")}
+          onClick={() => input.current.focus()}
+        >
+          {children}
+        </div>
         <input
           ref={input}
           className={[
@@ -38,19 +47,10 @@ function Input({
           ].join(" ")}
           type={inputType}
           id={inputID}
+          name={inputID}
           onFocus={animatedPlaceholder}
           onBlur={animatedPlaceholder}
         />
-        <div
-          ref={placeholder}
-          className={[
-            classes["input-text-placeholder"],
-            hasIcon ? classes["placeholder-with-icon"] : "",
-          ].join(" ")}
-          onClick={(event) => input.current.focus()}
-        >
-          {children}
-        </div>
       </div>
     </>
   );

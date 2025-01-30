@@ -6,7 +6,6 @@
 .input-text-container {
     position: relative;
     width: 100%;
-    cursor: text;  
 }
 
 .input-text-container:focus {
@@ -39,11 +38,13 @@
     z-index: 1;
     transition: top .15s, font-size .15s;
     user-select: none;
+    cursor: text;
 }
 
 .input-text-placeholder-up {
     font-size: 12px;
     top: 20%;
+    cursor: default;
 }
 
 .input-text:focus {

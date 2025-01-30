@@ -34,7 +34,7 @@ function Button({ children, clickAction }) {
     <button
       onClick={(e) => {
         animatedClick(e);
-        clickAction();
+        clickAction ? clickAction() : '';
       }}
     >
       {children}
