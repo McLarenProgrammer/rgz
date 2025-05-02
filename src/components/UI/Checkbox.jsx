@@ -1,13 +1,13 @@
-import classes from './styles/Checkbox.module.css'
+import './styles/Checkbox.css'
 
 function Checkbox({ children, inputID = "default" }) {
     return (
       <div className={classes.checkbox}>
         <input type="checkbox" id={inputID} />
-        <label htmlFor={inputID} className={classes["checkbox-label"]}>
-          <span className={classes["checkbox-box"]}>
+        <label htmlFor={inputID} className="checkbox-label">
+          <span className="checkbox-box">
             <svg
-              className={classes["checkbox-tick"]}
+              className="checkbox-tick"
               viewBox="0 0 107 154"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -21,7 +21,7 @@ function Checkbox({ children, inputID = "default" }) {
               />
             </svg>
           </span>
-          <span className={classes["checkbox-label-text"]}>{children}</span>
+          <span className="checkbox-label-text">{children}</span>
         </label>
       </div>
     );

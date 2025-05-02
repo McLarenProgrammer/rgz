@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import classes from "./styles/Input.module.css";
+import "./styles/Input.css";
 
 function Input({
   children,
@@ -13,38 +13,32 @@ function Input({
 
   function animatedPlaceholder(event) {
     if (document.activeElement === input.current || event.target.value !== "") {
-      placeholder.current.classList.add(classes["input-text-placeholder-up"]);
+      placeholder.current.classList.add("input-text-placeholder-up");
       return;
     }
-    placeholder.current.classList.remove(classes["input-text-placeholder-up"]);
+    placeholder.current.classList.remove("input-text-placeholder-up");
   }
 
   return (
     <>
       <div
-        className={classes["input-text-container"]}
+        className="input-text-container"
       >
         {hasIcon ? (
-          <img className={classes["input-text-icon"]} src={iconSrc} onClick={() => input.current.focus()} />
+          <img className="input-text-icon" src={iconSrc} onClick={() => input.current.focus()} />
         ) : (
           ""
         )}
         <div
           ref={placeholder}
-          className={[
-            classes["input-text-placeholder"],
-            hasIcon ? classes["placeholder-with-icon"] : "",
-          ].join(" ")}
+          className={`input-text-placeholder${hasIcon ? " placeholder-with-icon" : ""}`}
           onClick={() => input.current.focus()}
         >
           {children}
         </div>
         <input
           ref={input}
-          className={[
-            classes["input-text"],
-            hasIcon ? classes["with-icon"] : "",
-          ].join(" ")}
+          className={`input-text${hasIcon ? classes["with-icon"] : ""}`}
           type={inputType}
           id={inputID}
           name={inputID}

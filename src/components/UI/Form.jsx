@@ -1,8 +1,8 @@
-import classes from './styles/Form.module.css';
+import './styles/Form.css';
 
 function Form({children, formAction}) {
   return (
-    <form className={classes.form} action={formAction}>
+    <form className="form" action={formAction}>
       {children}
     </form>
   )

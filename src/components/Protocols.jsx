@@ -1,4 +1,4 @@
-import classes from './styles/Protocols.module.css'
+import './styles/Protocols.css'
 import Button from './UI/Button'
 import Checkbox from './UI/Checkbox';
 import Input from './UI/Input';
