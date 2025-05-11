@@ -24,3 +24,9 @@
 .form > button {
     margin-top: 18px;
 }
+
+.form > .checkbox {
+    align-self: flex-start;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}

@@ -1,7 +1,7 @@
 import "./styles/Button.css";
 import { useState } from "react";
 
-function Button({ children, clickAction }) {
+function Button({ children, clickAction, buttonType = "" }) {
     const [waves, setWaves] = useState([]);
 
     function animatedClick(e) {
@@ -36,6 +36,7 @@ function Button({ children, clickAction }) {
                 animatedClick(e);
                 clickAction ? clickAction() : "";
             }}
+            type={buttonType}
         >
             {children}
             {waves.map((wave) => (

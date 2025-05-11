@@ -13,6 +13,7 @@ function Checkbox({ children, inputID = "default" }) {
             <input
                 type="checkbox"
                 id={inputID}
+                name={inputID}
                 checked={checked}
                 onChange={(e) => setChecked(e.target.checked)}
             />
